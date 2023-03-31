@@ -1,0 +1,2 @@
+E:\gongzuo\flexolink-CSharp-sdk\flexolink-CSharp-sdk\obj\Debug\flexolink-CSharp-sdk.csproj.AssemblyReference.cache
+E:\gongzuo\flexolink-CSharp-sdk\flexolink-CSharp-sdk\obj\Debug\flexolink-CSharp-sdk.csproj.CoreCompileInputs.cache

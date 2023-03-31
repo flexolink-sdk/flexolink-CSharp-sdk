@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>flexo_sdk.1.0.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG">
+            <summary>flexo_sdk.com.flexo.api.impl.FlexoSDKEEG 的填充码类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.#ctor(flexo_sdk.com.flexo.api.impl.FlexoSDKEEG)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.addEventDateTimeDateTimeString">
+            <summary>设置 FlexoSDKEEG.addEvent(DateTime startTime, DateTime endTime, String eventContent) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.checkAuthString">
+            <summary>设置 FlexoSDKEEG.checkAuth(String auth) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.checkSignalQualitySingleArrayInt32">
+            <summary>设置 FlexoSDKEEG.checkSignalQuality(Single[] data, Int32 dataLength) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.closeDevice">
+            <summary>设置 FlexoSDKEEG.closeDevice() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.connectBleDeviceStringStringFlexoConnectCallback">
+            <summary>设置 FlexoSDKEEG.connectBleDevice(String portName, String deviceName, FlexoConnectCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.getBattery">
+            <summary>设置 FlexoSDKEEG.getBattery() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.getBodyPosition">
+            <summary>设置 FlexoSDKEEG.getBodyPosition() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.getExpiredAt">
+            <summary>设置 FlexoSDKEEG.getExpiredAt() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.isConnected">
+            <summary>设置 FlexoSDKEEG.isConnected() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.isWearPatch">
+            <summary>设置 FlexoSDKEEG.isWearPatch() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.pickDataByPointStampInt32">
+            <summary>设置 FlexoSDKEEG.pickDataByPointStamp(Int32 second) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.scanBleDeviceStringFlexoScanCallback">
+            <summary>设置 FlexoSDKEEG.scanBleDevice(String portName, FlexoScanCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.setFilterParamDoubleDoubleUInt32">
+            <summary>设置 FlexoSDKEEG.setFilterParam(Double hp, Double lp, UInt32 order) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.setRealDataListenerFlexoEEGCallback">
+            <summary>设置 FlexoSDKEEG.setRealDataListener(FlexoEEGCallback callback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.setSleepStageListenerFlexoSleepStageCallback">
+            <summary>设置 FlexoSDKEEG.setSleepStageListener(FlexoSleepStageCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.startMeditationFlexoEEGMeditationCallback">
+            <summary>设置 FlexoSDKEEG.startMeditation(FlexoEEGMeditationCallback flexoEEGMeditationCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.startRecordStringUserInfoFlexoDeviceRecordCallback">
+            <summary>设置 FlexoSDKEEG.startRecord(String edfPath, UserInfo userInfo, FlexoDeviceRecordCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.stopMeditation">
+            <summary>设置 FlexoSDKEEG.stopMeditation() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.stopRecord">
+            <summary>设置 FlexoSDKEEG.stopRecord() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.AllInstances.stopScan">
+            <summary>设置 FlexoSDKEEG.stopScan() 的 填充码</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.Bind(flexo_sdk.com.flexo.sdk.api.FlexoSDK)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.ConstructorStringString">
+            <summary>设置 FlexoSDKEEG.FlexoSDKEEG(String appKey, String appSecret) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.addEventDateTimeDateTimeString">
+            <summary>设置 FlexoSDKEEG.addEvent(DateTime startTime, DateTime endTime, String eventContent) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.checkAuthString">
+            <summary>设置 FlexoSDKEEG.checkAuth(String auth) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.checkSignalQualitySingleArrayInt32">
+            <summary>设置 FlexoSDKEEG.checkSignalQuality(Single[] data, Int32 dataLength) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.closeDevice">
+            <summary>设置 FlexoSDKEEG.closeDevice() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.connectBleDeviceStringStringFlexoConnectCallback">
+            <summary>设置 FlexoSDKEEG.connectBleDevice(String portName, String deviceName, FlexoConnectCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.getBattery">
+            <summary>设置 FlexoSDKEEG.getBattery() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.getBodyPosition">
+            <summary>设置 FlexoSDKEEG.getBodyPosition() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.getExpiredAt">
+            <summary>设置 FlexoSDKEEG.getExpiredAt() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.isConnected">
+            <summary>设置 FlexoSDKEEG.isConnected() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.isWearPatch">
+            <summary>设置 FlexoSDKEEG.isWearPatch() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.pickDataByPointStampInt32">
+            <summary>设置 FlexoSDKEEG.pickDataByPointStamp(Int32 second) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.scanBleDeviceStringFlexoScanCallback">
+            <summary>设置 FlexoSDKEEG.scanBleDevice(String portName, FlexoScanCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.setFilterParamDoubleDoubleUInt32">
+            <summary>设置 FlexoSDKEEG.setFilterParam(Double hp, Double lp, UInt32 order) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.setRealDataListenerFlexoEEGCallback">
+            <summary>设置 FlexoSDKEEG.setRealDataListener(FlexoEEGCallback callback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.setSleepStageListenerFlexoSleepStageCallback">
+            <summary>设置 FlexoSDKEEG.setSleepStageListener(FlexoSleepStageCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.startMeditationFlexoEEGMeditationCallback">
+            <summary>设置 FlexoSDKEEG.startMeditation(FlexoEEGMeditationCallback flexoEEGMeditationCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.startRecordStringUserInfoFlexoDeviceRecordCallback">
+            <summary>设置 FlexoSDKEEG.startRecord(String edfPath, UserInfo userInfo, FlexoDeviceRecordCallback flexoCallback) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.stopMeditation">
+            <summary>设置 FlexoSDKEEG.stopMeditation() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.stopRecord">
+            <summary>设置 FlexoSDKEEG.stopRecord() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.ShimFlexoSDKEEG.stopScan">
+            <summary>设置 FlexoSDKEEG.stopScan() 的 填充码</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.api.impl.Fakes.StubFlexoSDKEEG">
+            <summary>flexo_sdk.com.flexo.api.impl.FlexoSDKEEG 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.StubFlexoSDKEEG.#ctor(System.String,System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.StubFlexoSDKEEG.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.api.impl.Fakes.StubFlexoSDKEEG.InitializeStub">
+            <summary>初始化 type StubFlexoSDKEEG 的新实例</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.StubFlexoSDKEEG.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.api.impl.Fakes.StubFlexoSDKEEG.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK">
+            <summary>flexo_sdk.com.flexo.sdk.api.FlexoSDK 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.#ctor">
+            <summary>初始化 type StubFlexoSDK 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.AddEventDateTimeDateTimeString">
+            <summary>设置 FlexoSDK.addEvent(DateTime startTime, DateTime endTime, String eventContent) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.CheckSignalQualitySingleArrayInt32">
+            <summary>设置 FlexoSDK.checkSignalQuality(Single[] data, Int32 dataLength) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.CloseDevice">
+            <summary>设置 FlexoSDK.closeDevice() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.ConnectBleDeviceStringStringFlexoConnectCallback">
+            <summary>设置 FlexoSDK.connectBleDevice(String portName, String deviceName, FlexoConnectCallback flexoCallback) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.GetBattery">
+            <summary>设置 FlexoSDK.getBattery() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.GetBodyPosition">
+            <summary>设置 FlexoSDK.getBodyPosition() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.GetExpiredAt">
+            <summary>设置 FlexoSDK.getExpiredAt() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.IsConnected">
+            <summary>设置 FlexoSDK.isConnected() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.IsWearPatch">
+            <summary>设置 FlexoSDK.isWearPatch() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.PickDataByPointStampInt32">
+            <summary>设置 FlexoSDK.pickDataByPointStamp(Int32 second) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.ScanBleDeviceStringFlexoScanCallback">
+            <summary>设置 FlexoSDK.scanBleDevice(String portName, FlexoScanCallback flexoCallback) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.SetFilterParamDoubleDoubleUInt32">
+            <summary>设置 FlexoSDK.setFilterParam(Double hp, Double lp, UInt32 order) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.SetRealDataListenerFlexoEEGCallback">
+            <summary>设置 FlexoSDK.setRealDataListener(FlexoEEGCallback callback) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.SetSleepStageListenerFlexoSleepStageCallback">
+            <summary>设置 FlexoSDK.setSleepStageListener(FlexoSleepStageCallback flexoCallback) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.StartMeditationFlexoEEGMeditationCallback">
+            <summary>设置 FlexoSDK.startMeditation(FlexoEEGMeditationCallback flexoEEGMeditationCallback) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.StartRecordStringUserInfoFlexoDeviceRecordCallback">
+            <summary>设置 FlexoSDK.startRecord(String edfPath, UserInfo userInfo, FlexoDeviceRecordCallback flexoCallback) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.StopMeditation">
+            <summary>设置 FlexoSDK.stopMeditation() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.StopRecord">
+            <summary>设置 FlexoSDK.stopRecord() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.StopScan">
+            <summary>设置 FlexoSDK.stopScan() 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#addEvent(System.DateTime,System.DateTime,System.String)">
+            <summary>设置 FlexoSDK.addEvent(DateTime startTime, DateTime endTime, String eventContent) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#checkSignalQuality(System.Single[],System.Int32)">
+            <summary>设置 FlexoSDK.checkSignalQuality(Single[] data, Int32 dataLength) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#closeDevice">
+            <summary>设置 FlexoSDK.closeDevice() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#connectBleDevice(System.String,System.String,flexo_sdk.com.flexo.sdk.callback.FlexoConnectCallback)">
+            <summary>设置 FlexoSDK.connectBleDevice(String portName, String deviceName, FlexoConnectCallback flexoCallback) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#getBattery">
+            <summary>设置 FlexoSDK.getBattery() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#getBodyPosition">
+            <summary>设置 FlexoSDK.getBodyPosition() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#getExpiredAt">
+            <summary>设置 FlexoSDK.getExpiredAt() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#isConnected">
+            <summary>设置 FlexoSDK.isConnected() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#isWearPatch">
+            <summary>设置 FlexoSDK.isWearPatch() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#pickDataByPointStamp(System.Int32)">
+            <summary>设置 FlexoSDK.pickDataByPointStamp(Int32 second) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#scanBleDevice(System.String,flexo_sdk.com.flexo.sdk.callback.FlexoScanCallback)">
+            <summary>设置 FlexoSDK.scanBleDevice(String portName, FlexoScanCallback flexoCallback) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#setFilterParam(System.Double,System.Double,System.UInt32)">
+            <summary>设置 FlexoSDK.setFilterParam(Double hp, Double lp, UInt32 order) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#setRealDataListener(flexo_sdk.com.flexo.sdk.callback.FlexoEEGCallback)">
+            <summary>设置 FlexoSDK.setRealDataListener(FlexoEEGCallback callback) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#setSleepStageListener(flexo_sdk.com.flexo.sdk.callback.FlexoSleepStageCallback)">
+            <summary>设置 FlexoSDK.setSleepStageListener(FlexoSleepStageCallback flexoCallback) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#startMeditation(flexo_sdk.com.flexo.sdk.callback.FlexoEEGMeditationCallback)">
+            <summary>设置 FlexoSDK.startMeditation(FlexoEEGMeditationCallback flexoEEGMeditationCallback) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#startRecord(System.String,flexo_sdk.com.flexo.sdk.bean.UserInfo,flexo_sdk.com.flexo.sdk.callback.FlexoDeviceRecordCallback)">
+            <summary>设置 FlexoSDK.startRecord(String edfPath, UserInfo userInfo, FlexoDeviceRecordCallback flexoCallback) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#stopMeditation">
+            <summary>设置 FlexoSDK.stopMeditation() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#stopRecord">
+            <summary>设置 FlexoSDK.stopRecord() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.api.Fakes.StubFlexoSDK.flexo_sdk#com#flexo#sdk#api#FlexoSDK#stopScan">
+            <summary>设置 FlexoSDK.stopScan() 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo">
+            <summary>flexo_sdk.com.flexo.sdk.bean.UserInfo 的填充码类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.#ctor(flexo_sdk.com.flexo.sdk.bean.UserInfo)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances.getBirthday">
+            <summary>设置 UserInfo.getBirthday() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances.getName">
+            <summary>设置 UserInfo.getName() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances.getSex">
+            <summary>设置 UserInfo.getSex() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances.setBirthdayString">
+            <summary>设置 UserInfo.setBirthday(String birthday) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances.setNameString">
+            <summary>设置 UserInfo.setName(String name) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.AllInstances.setSexInt32">
+            <summary>设置 UserInfo.setSex(Int32 sex) 的 填充码</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.Constructor">
+            <summary>设置 UserInfo.UserInfo() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.getBirthday">
+            <summary>设置 UserInfo.getBirthday() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.getName">
+            <summary>设置 UserInfo.getName() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.getSex">
+            <summary>设置 UserInfo.getSex() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.setBirthdayString">
+            <summary>设置 UserInfo.setBirthday(String birthday) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.setNameString">
+            <summary>设置 UserInfo.setName(String name) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.ShimUserInfo.setSexInt32">
+            <summary>设置 UserInfo.setSex(Int32 sex) 的 填充码</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.bean.Fakes.StubUserInfo">
+            <summary>flexo_sdk.com.flexo.sdk.bean.UserInfo 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.bean.Fakes.StubUserInfo.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.StubUserInfo.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.bean.Fakes.StubUserInfo.InitializeStub">
+            <summary>初始化 type StubUserInfo 的新实例</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.StubUserInfo.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.bean.Fakes.StubUserInfo.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoConnectCallback">
+            <summary>flexo_sdk.com.flexo.sdk.callback.FlexoConnectCallback 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoConnectCallback.#ctor">
+            <summary>初始化 type StubFlexoConnectCallback 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoConnectCallback.OnConnectResultResultVo">
+            <summary>设置 FlexoConnectCallback.onConnectResult(ResultVo resultVo) 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoConnectCallback.flexo_sdk#com#flexo#sdk#callback#FlexoConnectCallback#onConnectResult(flexo_sdk.com.flexo.sdk.vo.ResultVo)">
+            <summary>设置 FlexoConnectCallback.onConnectResult(ResultVo resultVo) 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback">
+            <summary>flexo_sdk.com.flexo.sdk.callback.FlexoDeviceRecordCallback 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.#ctor">
+            <summary>初始化 type StubFlexoDeviceRecordCallback 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.OnAutoStopRecord">
+            <summary>设置 FlexoDeviceRecordCallback.onAutoStopRecord() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.OnRecordFailureResultVo">
+            <summary>设置 FlexoDeviceRecordCallback.onRecordFailure(ResultVo resultVo) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.OnRecording">
+            <summary>设置 FlexoDeviceRecordCallback.onRecording() 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.OnStartRecordString">
+            <summary>设置 FlexoDeviceRecordCallback.onStartRecord(String edfPath) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.OnStopRecord">
+            <summary>设置 FlexoDeviceRecordCallback.onStopRecord() 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.flexo_sdk#com#flexo#sdk#callback#FlexoDeviceRecordCallback#onAutoStopRecord">
+            <summary>设置 FlexoDeviceRecordCallback.onAutoStopRecord() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.flexo_sdk#com#flexo#sdk#callback#FlexoDeviceRecordCallback#onRecordFailure(flexo_sdk.com.flexo.sdk.vo.ResultVo)">
+            <summary>设置 FlexoDeviceRecordCallback.onRecordFailure(ResultVo resultVo) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.flexo_sdk#com#flexo#sdk#callback#FlexoDeviceRecordCallback#onRecording">
+            <summary>设置 FlexoDeviceRecordCallback.onRecording() 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.flexo_sdk#com#flexo#sdk#callback#FlexoDeviceRecordCallback#onStartRecord(System.String)">
+            <summary>设置 FlexoDeviceRecordCallback.onStartRecord(String edfPath) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoDeviceRecordCallback.flexo_sdk#com#flexo#sdk#callback#FlexoDeviceRecordCallback#onStopRecord">
+            <summary>设置 FlexoDeviceRecordCallback.onStopRecord() 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGCallback">
+            <summary>flexo_sdk.com.flexo.sdk.callback.FlexoEEGCallback 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGCallback.#ctor">
+            <summary>初始化 type StubFlexoEEGCallback 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGCallback.OnRealTimeDataSingleArray">
+            <summary>设置 FlexoEEGCallback.onRealTimeData(Single[] eegData) 的 stub</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGCallback.OnRealTimeFilterDataSingleArray">
+            <summary>设置 FlexoEEGCallback.onRealTimeFilterData(Single[] eegData) 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGCallback.flexo_sdk#com#flexo#sdk#callback#FlexoEEGCallback#onRealTimeData(System.Single[])">
+            <summary>设置 FlexoEEGCallback.onRealTimeData(Single[] eegData) 的 存根</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGCallback.flexo_sdk#com#flexo#sdk#callback#FlexoEEGCallback#onRealTimeFilterData(System.Single[])">
+            <summary>设置 FlexoEEGCallback.onRealTimeFilterData(Single[] eegData) 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGMeditationCallback">
+            <summary>flexo_sdk.com.flexo.sdk.callback.FlexoEEGMeditationCallback 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGMeditationCallback.#ctor">
+            <summary>初始化 type StubFlexoEEGMeditationCallback 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGMeditationCallback.CallbackInt32">
+            <summary>设置 FlexoEEGMeditationCallback.callback(Int32 i) 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoEEGMeditationCallback.flexo_sdk#com#flexo#sdk#callback#FlexoEEGMeditationCallback#callback(System.Int32)">
+            <summary>设置 FlexoEEGMeditationCallback.callback(Int32 i) 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoScanCallback">
+            <summary>flexo_sdk.com.flexo.sdk.callback.FlexoScanCallback 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoScanCallback.#ctor">
+            <summary>初始化 type StubFlexoScanCallback 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoScanCallback.CallbackString">
+            <summary>设置 FlexoScanCallback.callback(String text) 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoScanCallback.flexo_sdk#com#flexo#sdk#callback#FlexoScanCallback#callback(System.String)">
+            <summary>设置 FlexoScanCallback.callback(String text) 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoSleepStageCallback">
+            <summary>flexo_sdk.com.flexo.sdk.callback.FlexoSleepStageCallback 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoSleepStageCallback.#ctor">
+            <summary>初始化 type StubFlexoSleepStageCallback 的新实例</summary>
+        </member>
+        <member name="F:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoSleepStageCallback.CallbackInt32">
+            <summary>设置 FlexoSleepStageCallback.callback(Int32 sleepStage) 的 stub</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.callback.Fakes.StubFlexoSleepStageCallback.flexo_sdk#com#flexo#sdk#callback#FlexoSleepStageCallback#callback(System.Int32)">
+            <summary>设置 FlexoSleepStageCallback.callback(Int32 sleepStage) 的 存根</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo">
+            <summary>flexo_sdk.com.flexo.sdk.vo.ResultVo 的填充码类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.#ctor(flexo_sdk.com.flexo.sdk.vo.ResultVo)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances.getCode">
+            <summary>设置 ResultVo.getCode() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances.getMsg">
+            <summary>设置 ResultVo.getMsg() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances.getResultType">
+            <summary>设置 ResultVo.getResultType() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances.setCodeInt32">
+            <summary>设置 ResultVo.setCode(Int32 code) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances.setMsgString">
+            <summary>设置 ResultVo.setMsg(String msg) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.AllInstances.setResultTypeString">
+            <summary>设置 ResultVo.setResultType(String resultType) 的 填充码</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.Constructor">
+            <summary>设置 ResultVo.ResultVo() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.getCode">
+            <summary>设置 ResultVo.getCode() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.getMsg">
+            <summary>设置 ResultVo.getMsg() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.getResultType">
+            <summary>设置 ResultVo.getResultType() 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.setCodeInt32">
+            <summary>设置 ResultVo.setCode(Int32 code) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.setMsgString">
+            <summary>设置 ResultVo.setMsg(String msg) 的 填充码</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.ShimResultVo.setResultTypeString">
+            <summary>设置 ResultVo.setResultType(String resultType) 的 填充码</summary>
+        </member>
+        <member name="T:flexo_sdk.com.flexo.sdk.vo.Fakes.StubResultVo">
+            <summary>flexo_sdk.com.flexo.sdk.vo.ResultVo 的存根类型</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.vo.Fakes.StubResultVo.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.StubResultVo.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:flexo_sdk.com.flexo.sdk.vo.Fakes.StubResultVo.InitializeStub">
+            <summary>初始化 type StubResultVo 的新实例</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.StubResultVo.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:flexo_sdk.com.flexo.sdk.vo.Fakes.StubResultVo.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+    </members>
+</doc>
