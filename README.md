@@ -22,7 +22,8 @@
 1、初始化SDK
 
 ```
- FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
+            //初始化sdk
+            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
 ```
 
 2、扫描设备
@@ -30,7 +31,16 @@
 
 
 ```
- // appkey 与appSecret联系业务人员获取 FlexoSDK flexoSDK = new FlexoSDKEEG("appkey", "appSecret"); //过期时间 long expiredAt = flexoSDK.getExpiredAt(); //连接设备 portName：蓝牙适配器串口 默认 COM5 flexoSDK.connectBleDevice("portName", "Flex-BM07-010002", new FlexoConnectCallbackListener()); Thread.Sleep(5000); //主动关闭连接 flexoSDK.closeDevice();
-```
+          	// appkey 与appSecret联系业务人员获取 
+            FlexoSDK flexoSDK = new FlexoSDKEEG("appkey", "appSecret");
+            //过期时间
+            long expiredAt = flexoSDK.getExpiredAt();
+            //连接设备 portName：蓝牙适配器串口 默认 COM5
+            flexoSDK.connectBleDevice("portName", "Flex-BM07-010002", new FlexoConnectCallbackListener());
+
+            Thread.Sleep(5000);
+            //主动关闭连接
+            flexoSDK.closeDevice();
+ ```
 
 **相关依赖**：https://github.com/flexolink-sdk/flexolink-CSharp-sdk/tree/beta/flexolink-CSharp-sdk/bin/x64/Debug
