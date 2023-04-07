@@ -49,6 +49,7 @@ https://openplatform.flexolinkai.com/#/guide/CSharp/access
             flexoSDK.closeDevice();
  ```
 **使用时需引用下列依赖**
+
 Microsoft.CSharp：4.0.0.0
 
 Newtonsoft.Json：13.0.0.0
@@ -74,6 +75,7 @@ System.Xml.Linq：4.0.0.0
 flexo_sdk:1.0.0.0
 
 **dll等依赖文件**
+
 flexo_sdk.dll
 
 flexInitSignalquality.dll
@@ -91,4 +93,5 @@ dnn_1122_qiyuan_250HZ_4class_30s_1.ncnn.param
 dnn_1122_qiyuan_250HZ_4class_30s_1.ncnn.bin
 
 **相关依赖**
+
 https://github.com/flexolink-sdk/flexolink-CSharp-sdk/tree/beta/flexolink-CSharp-sdk/bin/x64/Debug
