@@ -179,8 +179,8 @@ namespace flexo_sdk
         // 开始记录eeg
         private static void startRecordTest()
         {
-            DateTimeOffset now = DateTimeOffset.Now;
-            long thisTime = now.ToUnixTimeMilliseconds();
+            TimeSpan tss = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            long thisTime = Convert.ToInt64(tss.TotalMilliseconds);
             //初始化sdk
             FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
@@ -222,6 +222,12 @@ namespace flexo_sdk
             //连接设备
             flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
             Thread.Sleep(30000);
+            //调用分期接口前需进行信号质量检测接口
+            //float[] f = flexoSDK.pickDataByPointStamp(10);
+            //bool b = flexoSDK.checkSignalQuality(f, f.Length);
+            //if (b) {
+            //    flexoSDK.setSleepStageListener(new FlexoSleepStageCallbackListener());
+            //}
             flexoSDK.setSleepStageListener(new FlexoSleepStageCallbackListener());
             Thread.Sleep(100000);
             //主动关闭连接

@@ -15,8 +15,17 @@ namespace flexolink_CSharp_sdk
     public class FlexoRecordCallbackListener : FlexoDeviceRecordCallback
     {
         /**
-         * 自动结束记录
+         * 事件回调
+         * 0 脱落 1连接
          */
+        public void eventCallback(int eventNum)
+        {
+            throw new NotImplementedException();
+        }
+
+        /**
+* 自动结束记录
+*/
         public void onAutoStopRecord()
         {
             Debug.WriteLine("onAutoStopRecord:回调");

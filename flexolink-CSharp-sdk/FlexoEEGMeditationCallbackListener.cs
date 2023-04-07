@@ -19,6 +19,7 @@ namespace flexolink_CSharp_sdk
         {
             Debug.WriteLine("冥想分期结果:" + i);
         }
+
     }
 
 }
