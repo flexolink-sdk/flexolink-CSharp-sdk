@@ -21,7 +21,7 @@ namespace flexo_sdk
 
         public static void Main(string[] ages)
         {
-            setSleepStageListenerTest();
+            isConnectedTest();
 
         }
         //扫描设备
@@ -65,12 +65,12 @@ namespace flexo_sdk
             //连接设备
             flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 bool b = flexoSDK.isConnected();
-                Debug.Write(b);
+                Debug.WriteLine(b);
 
-                Thread.Sleep(1000);
+                Thread.Sleep(300);
             }
             //主动关闭连接
             flexoSDK.closeDevice();
@@ -122,12 +122,11 @@ namespace flexo_sdk
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
             flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
-            Thread.Sleep(10000);
             for (int i = 0; i < 100; i++)
             {
                 bool b = flexoSDK.isWearPatch();
                 Debug.WriteLine(b);
-                Thread.Sleep(1000);
+                Thread.Sleep(300);
             }
             Thread.Sleep(10000);
             //主动关闭连接
