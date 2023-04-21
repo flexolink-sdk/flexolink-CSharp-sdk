@@ -1,4 +1,5 @@
 ﻿using flexo_sdk.com.flexo.sdk.callback;
+using flexo_sdk.com.flexo.sdk.vo;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +21,13 @@ namespace flexolink_CSharp_sdk
         public void callback(string text)
         {
             Debug.WriteLine("设备名称:" + text);
+        }
+        /**
+         * 异常事件
+         */
+        public void onError(ResultVo resultVo)
+        {
+            Debug.WriteLine("异常事件:" + resultVo.getMsg());
         }
     }
 }

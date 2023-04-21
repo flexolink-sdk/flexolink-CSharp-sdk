@@ -34,5 +34,13 @@ namespace flexolink_CSharp_sdk
             Debug.WriteLine("连接状态:" + resultVo.getResultType());
 
         }
+
+        /**
+         * 异常事件
+         */
+        public void onError(ResultVo resultVo)
+        {
+            Debug.WriteLine("异常事件:" + resultVo.getMsg());
+        }
     }
 }

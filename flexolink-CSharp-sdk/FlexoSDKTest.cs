@@ -21,7 +21,7 @@ namespace flexo_sdk
 
         public static void Main(string[] ages)
         {
-            isConnectedTest();
+            scanBleDeviceTest();
 
         }
         //扫描设备
@@ -242,10 +242,10 @@ namespace flexo_sdk
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName, "Flex-BM01-020085", new FlexoConnectCallbackListener());
             Thread.Sleep(30000);
             flexoSDK.startMeditation(new FlexoEEGMeditationCallbackListener());
-            Thread.Sleep(1000);
+            Thread.Sleep(100000);
             flexoSDK.stopMeditation();
             //主动关闭连接
             flexoSDK.closeDevice();
