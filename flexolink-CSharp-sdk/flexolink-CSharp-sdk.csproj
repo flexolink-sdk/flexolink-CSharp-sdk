@@ -75,7 +75,7 @@
   <ItemGroup>
     <Reference Include="flexo_sdk, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\flexo_CSharp_sdk\flexo_sdk\flexo_sdk\bin\x64\Debug\flexo_sdk.dll</HintPath>
+      <HintPath>bin\x64\Debug\flexo_sdk.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
