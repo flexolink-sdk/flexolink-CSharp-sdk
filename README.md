@@ -89,7 +89,7 @@ flexmeditation.dll
 edlDll.dll
 
 Attention.dll
-
+ 
 dnn_1122_qiyuan_250HZ_4class_30s_1.ncnn.param
 
 dnn_1122_qiyuan_250HZ_4class_30s_1.ncnn.bin
