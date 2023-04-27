@@ -92,6 +92,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlexoSDKAttentionCallbackListener.cs" />
     <Compile Include="FlexoSDKTest.cs" />
     <Compile Include="FlexoConnectCallbackListener.cs" />
     <Compile Include="FlexoRecordCallbackListener.cs" />

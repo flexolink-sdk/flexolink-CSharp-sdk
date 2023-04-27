@@ -15,13 +15,13 @@ namespace flexo_sdk
 
         static string portName = "COM5";
         //appkey
-        static string appkey = "**";
+        static string appkey = "rl33338ba08d33";
         //
-        static string appSecret = "**";
+        static string appSecret = "b3a8ddefdfca3212631353017dd1b331";
 
         public static void Main(string[] ages)
         {
-            scanBleDeviceTest();
+            startAttention();
 
         }
         //扫描设备
@@ -210,6 +210,30 @@ namespace flexo_sdk
             //主动关闭连接
             flexoSDK.closeDevice();
         }
+        // 获取专注度监听
+        private static void startAttention()
+        {
+            //初始化sdk
+            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
+            //授权过期时间
+            long expiredAt = flexoSDK.getExpiredAt();
+            //连接设备
+            flexoSDK.connectBleDevice(portName, "Flex-BM01-020043", new FlexoConnectCallbackListener());
+            Thread.Sleep(10000);
+            //调用注意力接口前需进行信号质量检测接口
+            //float[] f = flexoSDK.pickDataByPointStamp(10);
+            //bool b = flexoSDK.checkSignalQuality(f, f.Length);
+            //if (b) {
+            //    flexoSDK.setSleepStageListener(new FlexoSleepStageCallbackListener());
+            //}
+            flexoSDK.startAttention(new FlexoSDKAttentionCallbackListener());
+            Thread.Sleep(1000000);
+            //关闭注意力监听
+            flexoSDK.stopAttention();
+            Thread.Sleep(10000);
+            //主动关闭连接
+            flexoSDK.closeDevice();
+        }
 
         // 实时睡眠分期监听
         private static void setSleepStageListenerTest()
@@ -242,10 +266,10 @@ namespace flexo_sdk
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM01-020085", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName, "Flex-BM05-530040", new FlexoConnectCallbackListener());
             Thread.Sleep(30000);
             flexoSDK.startMeditation(new FlexoEEGMeditationCallbackListener());
-            Thread.Sleep(100000);
+            Thread.Sleep(10000000);
             flexoSDK.stopMeditation();
             //主动关闭连接
             flexoSDK.closeDevice();
