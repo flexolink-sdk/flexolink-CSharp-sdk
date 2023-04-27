@@ -15,9 +15,9 @@ namespace flexo_sdk
 
         static string portName = "COM5";
         //appkey
-        static string appkey = "rl33338ba08d33";
+        static string appkey = "**";
         //
-        static string appSecret = "b3a8ddefdfca3212631353017dd1b331";
+        static string appSecret = "**";
 
         public static void Main(string[] ages)
         {
