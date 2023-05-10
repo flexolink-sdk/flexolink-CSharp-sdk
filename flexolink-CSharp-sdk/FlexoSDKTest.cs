@@ -4,6 +4,7 @@ using flexo_sdk.com.flexo.sdk.bean;
 using flexolink_CSharp_sdk;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Threading;
 
@@ -16,24 +17,80 @@ namespace flexo_sdk
         static string portName = "COM5";
         //appkey
         static string appkey = "**";
-        //
+        //appSecret
         static string appSecret = "**";
-
+        //授权信息存储路径
+        static string filePath = @"D:\tmp\flexoSDK.auth";
+        static string deviceName = "Flex-BM07-010002";
+        //初始化sdk
+        static FlexoSDK flexoSDK = null;
         public static void Main(string[] ages)
         {
+            // 获取离线授权
+            getAuth();
+            // 读取离线授权信息并初始化sdk
+            flexoSDK = new FlexoSDKEEG(readAuthCode());
+            // 开始使用
             startAttention();
 
         }
+        // 获取离线授权
+        private static void getAuth(){
+            FexoAuth fexoAuth = new FexoAuth();
+            string authText = fexoAuth.getAuth(appkey, appSecret);
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.Write(authText);
+            }
+
+        }
+
+        // 读取已获取的离线授权码
+        private static string readAuthCode()
+        {
+            string authText = "";
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                authText = reader.ReadToEnd();
+            }
+            
+            return authText;
+        }
+        // 获取专注度监听
+        private static void startAttention()
+        {
+           
+        
+            //授权过期时间
+            long expiredAt = flexoSDK.getExpiredAt();
+            //连接设备
+            flexoSDK.connectBleDevice(portName, deviceName, new FlexoConnectCallbackListener());
+            Thread.Sleep(10000);
+            //调用注意力接口前需进行信号质量检测接口
+            //float[] f = flexoSDK.pickDataByPointStamp(10);
+            //bool b = flexoSDK.checkSignalQuality(f, f.Length);
+            //if (b) {
+            //    flexoSDK.setSleepStageListener(new FlexoSleepStageCallbackListener());
+            //}
+            flexoSDK.startAttention(new FlexoSDKAttentionCallbackListener());
+            Thread.Sleep(10000000);
+            //关闭注意力监听
+            flexoSDK.stopAttention();
+            Thread.Sleep(10000);
+            //主动关闭连接
+            flexoSDK.closeDevice();
+        }
+
         //扫描设备
         private static void scanBleDeviceTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //扫描设备
             flexoSDK.scanBleDevice(portName, new FlexoScanCallbackListener());
-            Thread.Sleep(5000);
+
+
+            Thread.Sleep(1000000);
             //停止扫描
             flexoSDK.stopScan();
 
@@ -43,12 +100,10 @@ namespace flexo_sdk
         //连接设备
         private static void connectBleDeviceTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
 
             Thread.Sleep(5000);
             //主动关闭连接
@@ -58,12 +113,10 @@ namespace flexo_sdk
         //判断设备是否连接
         private static void isConnectedTest()
         { 
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
 
             for (int i = 0; i < 1000; i++)
             {
@@ -79,12 +132,10 @@ namespace flexo_sdk
         //脑电实时数据监听
         private static void setRealDataListenerTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             flexoSDK.setRealDataListener(new FlexoEEGCallbackListener());
             Thread.Sleep(10000);
@@ -95,12 +146,10 @@ namespace flexo_sdk
         //原始数据截取
         private static void pickDataByPointStampTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             for (int i = 0; i < 100; i++)
             {
@@ -116,12 +165,10 @@ namespace flexo_sdk
         // 是否佩戴额贴
         private static void isWearPatchTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             for (int i = 0; i < 100; i++)
             {
                 bool b = flexoSDK.isWearPatch();
@@ -135,12 +182,10 @@ namespace flexo_sdk
         // 获取蓝牙设备电量
         private static void getBatteryTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             for (int i = 0; i < 10; i++)
             {
@@ -156,12 +201,10 @@ namespace flexo_sdk
         // 获取采集的数据质量
         private static void checkSignalQualityTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             for (int i = 0; i < 100; i++)
             {
@@ -180,12 +223,10 @@ namespace flexo_sdk
         {
             TimeSpan tss = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
             long thisTime = Convert.ToInt64(tss.TotalMilliseconds);
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             string edf = "E:\\files\\" + thisTime + ".edf";
             UserInfo userInfo = new UserInfo();
@@ -210,40 +251,14 @@ namespace flexo_sdk
             //主动关闭连接
             flexoSDK.closeDevice();
         }
-        // 获取专注度监听
-        private static void startAttention()
-        {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
-            //授权过期时间
-            long expiredAt = flexoSDK.getExpiredAt();
-            //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM01-020043", new FlexoConnectCallbackListener());
-            Thread.Sleep(10000);
-            //调用注意力接口前需进行信号质量检测接口
-            //float[] f = flexoSDK.pickDataByPointStamp(10);
-            //bool b = flexoSDK.checkSignalQuality(f, f.Length);
-            //if (b) {
-            //    flexoSDK.setSleepStageListener(new FlexoSleepStageCallbackListener());
-            //}
-            flexoSDK.startAttention(new FlexoSDKAttentionCallbackListener());
-            Thread.Sleep(1000000);
-            //关闭注意力监听
-            flexoSDK.stopAttention();
-            Thread.Sleep(10000);
-            //主动关闭连接
-            flexoSDK.closeDevice();
-        }
-
+   
         // 实时睡眠分期监听
         private static void setSleepStageListenerTest()
         {
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(30000);
             //调用分期接口前需进行信号质量检测接口
             //float[] f = flexoSDK.pickDataByPointStamp(10);
@@ -261,13 +276,11 @@ namespace flexo_sdk
         private static void startMeditationTest()
         {
 
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM05-530040", new FlexoConnectCallbackListener());
-            Thread.Sleep(30000);
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
+            Thread.Sleep(10000);
             flexoSDK.startMeditation(new FlexoEEGMeditationCallbackListener());
             Thread.Sleep(10000000);
             flexoSDK.stopMeditation();
@@ -278,12 +291,10 @@ namespace flexo_sdk
         private static void getBodyPositionTest()
         {
    
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             for (int i = 0; i < 100; i++)
             {
@@ -299,12 +310,10 @@ namespace flexo_sdk
         private static void setFilterParamTest()
         {
 
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
             //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
             //连接设备
-            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            flexoSDK.connectBleDevice(portName,deviceName, new FlexoConnectCallbackListener());
             Thread.Sleep(10000);
             flexoSDK.setFilterParam(8,40,2);
 
