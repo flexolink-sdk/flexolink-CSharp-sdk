@@ -28,25 +28,66 @@ https://openplatform.flexolinkai.com/#/guide/CSharp/access
 **初始化SDK**
 
 ```
-            //初始化sdk
-            FlexoSDK flexoSDK = new FlexoSDKEEG(appkey, appSecret);
+    //获取授权信息
+    FexoAuth fexoAuth = new FexoAuth();
+    string auth =  fexoAuth.getAuth(appkey, appSecret);
+    FlexoSDK flexoSDK = new FlexoSDKEEG(auth);
+    //授权过期时间
+    long expiredAt = flexoSDK.getExpiredAt();
 ```
 
-**扫描设备**
+**连接设备**
 
 
 
 ```
-          	// appkey 与appSecret联系业务人员获取 
-            FlexoSDK flexoSDK = new FlexoSDKEEG("appkey", "appSecret");
-            //过期时间
+    static string filePath = @"D:\tmp\flexoSDK.auth";
+
+	public static void Main(string[] ages)
+        {
+            // 获取离线授权
+            getAuth();
+            // 读取离线授权信息并初始化sdk
+            flexoSDK = new FlexoSDKEEG(readAuthCode());
+            // 连接设备
+            connectBleDeviceTest();
+
+        }
+        // 获取离线授权
+        private static void getAuth(){
+            FexoAuth fexoAuth = new FexoAuth();
+            string authText = fexoAuth.getAuth(appkey, appSecret);
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.Write(authText);
+            }
+
+        }
+
+        // 读取已获取的离线授权码
+        private static string readAuthCode()
+        {
+            string authText = "";
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                authText = reader.ReadToEnd();
+            }
+            
+            return authText;
+        }
+
+        //连接设备
+        private static void connectBleDeviceTest()
+        {
+            //授权过期时间
             long expiredAt = flexoSDK.getExpiredAt();
-            //连接设备 portName：蓝牙适配器串口 默认 COM5
-            flexoSDK.connectBleDevice("portName", "Flex-BM07-010002", new FlexoConnectCallbackListener());
+            //连接设备
+            flexoSDK.connectBleDevice(portName, "Flex-BM07-010002", new FlexoConnectCallbackListener());
 
             Thread.Sleep(5000);
             //主动关闭连接
             flexoSDK.closeDevice();
+        }
  ```
 **使用时需引用下列依赖**
 
@@ -96,4 +137,4 @@ dnn_1122_qiyuan_250HZ_4class_30s_1.ncnn.bin
 
 **相关依赖**
 
-https://github.com/flexolink-sdk/flexolink-CSharp-sdk/tree/beta/flexolink-CSharp-sdk/bin/x64/Debug
+https://github.com/flexolink-sdk/flexolink-CSharp-sdk/tree/offline.beta/flexolink-CSharp-sdk/bin/x64/Debug
