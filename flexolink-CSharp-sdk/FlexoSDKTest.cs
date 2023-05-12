@@ -15,13 +15,13 @@ namespace flexo_sdk
 
         static string portName = "COM5";
         //appkey
-        static string appkey = "**";
+        static string appkey = "rl33338ba18d3v";
         //
-        static string appSecret = "**";
+        static string appSecret = "b3a8ddefdfca3212631353017dd1b331";
 
         public static void Main(string[] ages)
         {
-            startAttention();
+            startMeditationTest();
 
         }
         //扫描设备
