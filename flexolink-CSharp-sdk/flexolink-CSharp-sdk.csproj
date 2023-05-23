@@ -92,7 +92,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlexoHttpUtil.cs" />
     <Compile Include="FlexoSDKAttentionCallbackListener.cs" />
     <Compile Include="FlexoSDKTest.cs" />
     <Compile Include="FlexoConnectCallbackListener.cs" />
