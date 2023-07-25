@@ -1,6 +1,7 @@
 ﻿using flexo_sdk.com.flexo.api.impl;
 using flexo_sdk.com.flexo.sdk.api;
 using flexo_sdk.com.flexo.sdk.bean;
+using flexo_sdk.com.flexo.sdk.util;
 using flexolink_CSharp_sdk;
 using System;
 using System.Diagnostics;
@@ -36,7 +37,7 @@ namespace flexo_sdk
         }
         // 获取离线授权
         private static void getAuth(){
-            FexoAuth fexoAuth = new FexoAuth();
+            FlexoAuth fexoAuth = new FlexoAuth();
             string authText = fexoAuth.getAuth(appkey, appSecret);
             using (StreamWriter writer = new StreamWriter(filePath))
             {
